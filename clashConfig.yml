@@ -1,0 +1,504 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - 114.114.114.114
+    - 223.5.5.5
+    - 8.8.8.8
+  fallback: []
+  fake-ip-filter:
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    - WORKGROUP
+proxies:
+  - name: "Traffic: 19.33 GB | 100 GB"
+    server: gzbgp01.00991169.xyz
+    port: 14901
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: "Expire: 2022-12-28"
+    server: gzbgp01.00991169.xyz
+    port: 14901
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港-01
+    server: gzbgp01.00991169.xyz
+    port: 14901
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港-02
+    server: gzbgp01.00991169.xyz
+    port: 14902
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港-03
+    server: gzbgp01.00991169.xyz
+    port: 14903
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港-04
+    server: gzbgp01.00991169.xyz
+    port: 14904
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港-05
+    server: gzbgp01.00991169.xyz
+    port: 14905
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港-06
+    server: gzbgp01.00991169.xyz
+    port: 14906
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本-01
+    server: shbgp01.00991169.xyz
+    port: 14931
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本-02
+    server: shbgp01.00991169.xyz
+    port: 14932
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本-03
+    server: shbgp01.00991169.xyz
+    port: 14933
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本-04
+    server: shbgp01.00991169.xyz
+    port: 14934
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬 狮城-01
+    server: gzbgp01.00991169.xyz
+    port: 14941
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬 狮城-02
+    server: gzbgp01.00991169.xyz
+    port: 14942
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬 狮城-03
+    server: gzbgp01.00991169.xyz
+    port: 14943
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国-01
+    server: shbgp01.00991169.xyz
+    port: 14911
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国-02
+    server: shbgp01.00991169.xyz
+    port: 14912
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国-03
+    server: shbgp01.00991169.xyz
+    port: 14913
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国-04
+    server: shbgp01.00991169.xyz
+    port: 14914
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国-05
+    server: shbgp01.00991169.xyz
+    port: 14915
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国-06
+    server: shbgp01.00991169.xyz
+    port: 14916
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳 台湾-01
+    server: gzbgp01.00991169.xyz
+    port: 14951
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 韩国-01
+    server: shbgp01.00991169.xyz
+    port: 14965
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 韩国-02
+    server: shbgp01.00991169.xyz
+    port: 14966
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇳 印度-01
+    server: gzbgp01.00991169.xyz
+    port: 14921
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇭 泰国-01
+    server: gzbgp01.00991169.xyz
+    port: 14961
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇻🇳 越南-01
+    server: gzbgp01.00991169.xyz
+    port: 14962
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇦🇺 悉尼-01
+    server: gzbgp01.00991169.xyz
+    port: 14970
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇦🇪 迪拜-01
+    server: gzbgp01.00991169.xyz
+    port: 14972
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 伦敦-01
+    server: bjbgp01.00991169.xyz
+    port: 14963
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 伦敦-02
+    server: bjbgp01.00991169.xyz
+    port: 14964
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其-01
+    server: bjbgp01.00991169.xyz
+    port: 14971
+    type: trojan
+    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
+    sni: iqiyi.com
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: Proxies
+    type: select
+    proxies:
+      - HK
+      - JP
+      - SG
+      - TW
+      - US
+      - "Traffic: 19.33 GB | 100 GB"
+      - "Expire: 2022-12-28"
+      - 🇭🇰 香港-01
+      - 🇭🇰 香港-02
+      - 🇭🇰 香港-03
+      - 🇭🇰 香港-04
+      - 🇭🇰 香港-05
+      - 🇭🇰 香港-06
+      - 🇯🇵 日本-01
+      - 🇯🇵 日本-02
+      - 🇯🇵 日本-03
+      - 🇯🇵 日本-04
+      - 🇸🇬 狮城-01
+      - 🇸🇬 狮城-02
+      - 🇸🇬 狮城-03
+      - 🇺🇸 美国-01
+      - 🇺🇸 美国-02
+      - 🇺🇸 美国-03
+      - 🇺🇸 美国-04
+      - 🇺🇸 美国-05
+      - 🇺🇸 美国-06
+      - 🇨🇳 台湾-01
+      - 🇰🇷 韩国-01
+      - 🇰🇷 韩国-02
+      - 🇮🇳 印度-01
+      - 🇹🇭 泰国-01
+      - 🇻🇳 越南-01
+      - 🇦🇺 悉尼-01
+      - 🇦🇪 迪拜-01
+      - 🇬🇧 伦敦-01
+      - 🇬🇧 伦敦-02
+      - 🇹🇷 土耳其-01
+  - name: Netflix
+    type: select
+    proxies:
+      - Proxies
+      - HK
+      - JP
+      - SG
+      - TW
+      - US
+  - name: Streaming
+    type: select
+    proxies:
+      - Proxies
+      - HK
+      - JP
+      - SG
+      - TW
+      - US
+  - name: StreamingSE
+    type: select
+    proxies:
+      - DIRECT
+      - HK
+      - TW
+  - name: HK
+    type: select
+    proxies:
+      - 🇭🇰 香港-01
+      - 🇭🇰 香港-02
+      - 🇭🇰 香港-03
+      - 🇭🇰 香港-04
+      - 🇭🇰 香港-05
+      - 🇭🇰 香港-06
+  - name: JP
+    type: select
+    proxies:
+      - 🇯🇵 日本-01
+      - 🇯🇵 日本-02
+      - 🇯🇵 日本-03
+      - 🇯🇵 日本-04
+  - name: SG
+    type: select
+    proxies:
+      - 🇸🇬 狮城-01
+      - 🇸🇬 狮城-02
+      - 🇸🇬 狮城-03
+  - name: TW
+    type: select
+    proxies:
+      - 🇨🇳 台湾-01
+  - name: US
+    type: select
+    proxies:
+      - 🇺🇸 美国-01
+      - 🇺🇸 美国-02
+      - 🇺🇸 美国-03
+      - 🇺🇸 美国-04
+      - 🇺🇸 美国-05
+      - 🇺🇸 美国-06
+rules:
+  - DOMAIN-KEYWORD, gitee, DIRECT
+  - DOMAIN-KEYWORD, programmercarl, DIRECT
+  - DOMAIN-KEYWORD, spring.io, Proxies
+  - DOMAIN-KEYWORD, openai.com, Proxies
+  - DOMAIN-KEYWORD, grammarly, Proxies
+  - DOMAIN-KEYWORD, txl.ca, Proxies
+  - DOMAIN-KEYWORD, mo.fish, Proxies
+  - DOMAIN-KEYWORD, deeply, Proxies
+  - DOMAIN-KEYWORD, google, Proxies
+  - DOMAIN-KEYWORD, overleaf.com, Proxies
+  - DOMAIN-KEYWORD, git, Proxies
+  - DOMAIN-KEYWORD, github, Proxies
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,Proxies
+  - RULE-SET,apple,Proxies
+  - RULE-SET,google,Proxies
+  - RULE-SET,proxy,Proxies
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,telegramcidr,Proxies
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxies
+tun:
+  enable: true
+  stack: gvisor
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400

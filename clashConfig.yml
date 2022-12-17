@@ -1,9 +1,9 @@
-port: 7890
-socks-port: 7891
+mixed-port: 7890
 allow-lan: true
-mode: Rule
+bind-address: "*"
+mode: rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
   enhanced-mode: fake-ip
@@ -25,391 +25,372 @@ dns:
     - "*.msftconnecttest.com"
     - WORKGROUP
 proxies:
-  - name: "Traffic: 19.33 GB | 100 GB"
-    server: gzbgp01.00991169.xyz
-    port: 14901
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: IEPL 香港  ₂.₅ₓ
+    type: ss
+    server: iepl.teacat2.xyz
+    port: 49991
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: "Expire: 2022-12-28"
-    server: gzbgp01.00991169.xyz
-    port: 14901
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: IEPL 台湾  ₂.₅ₓ
+    type: ss
+    server: iepl.teacat2.xyz
+    port: 49992
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇭🇰 香港-01
-    server: gzbgp01.00991169.xyz
-    port: 14901
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: IEPL 日本 ₂.₅ₓ
+    type: ss
+    server: iepl.teacat2.xyz
+    port: 49993
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇭🇰 香港-02
-    server: gzbgp01.00991169.xyz
-    port: 14902
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: IEPL 新加坡 ₂.₅ₓ
+    type: ss
+    server: iepl.teacat2.xyz
+    port: 49994
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇭🇰 香港-03
-    server: gzbgp01.00991169.xyz
-    port: 14903
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: IEPL 韩国  ₂.₅ₓ
+    type: ss
+    server: iepl.teacat2.xyz
+    port: 49995
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇭🇰 香港-04
-    server: gzbgp01.00991169.xyz
-    port: 14904
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: IEPL 美国 ₂.₅ₓ
+    type: ss
+    server: iepl.teacat2.xyz
+    port: 49996
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇭🇰 香港-05
-    server: gzbgp01.00991169.xyz
-    port: 14905
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 香港1
+    type: ss
+    server: hk1.teacat2.xyz
+    port: 50067
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇭🇰 香港-06
-    server: gzbgp01.00991169.xyz
-    port: 14906
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 香港2
+    type: ss
+    server: hk2.teacat2.xyz
+    port: 50002
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇯🇵 日本-01
-    server: shbgp01.00991169.xyz
-    port: 14931
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 香港3
+    type: ss
+    server: hk3.teacat2.xyz
+    port: 50001
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇯🇵 日本-02
-    server: shbgp01.00991169.xyz
-    port: 14932
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 台湾1
+    type: ss
+    server: tw1.teacat2.xyz
+    port: 50003
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇯🇵 日本-03
-    server: shbgp01.00991169.xyz
-    port: 14933
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 台湾2
+    type: ss
+    server: tw2.teacat2.xyz
+    port: 50068
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇯🇵 日本-04
-    server: shbgp01.00991169.xyz
-    port: 14934
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 日本1
+    type: ss
+    server: jp1.teacat2.xyz
+    port: 50060
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇸🇬 狮城-01
-    server: gzbgp01.00991169.xyz
-    port: 14941
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 日本2
+    type: ss
+    server: jp2.teacat2.xyz
+    port: 50061
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇸🇬 狮城-02
-    server: gzbgp01.00991169.xyz
-    port: 14942
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 韩国1
+    type: ss
+    server: kr1.teacat2.xyz
+    port: 50058
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇸🇬 狮城-03
-    server: gzbgp01.00991169.xyz
-    port: 14943
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 新加坡1
+    type: ss
+    server: sg1.teacat2.xyz
+    port: 50065
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇺🇸 美国-01
-    server: shbgp01.00991169.xyz
-    port: 14911
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 新加坡2
+    type: ss
+    server: sg2.teacat2.xyz
+    port: 50004
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇺🇸 美国-02
-    server: shbgp01.00991169.xyz
-    port: 14912
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 美国1
+    type: ss
+    server: us1.teacat2.xyz
+    port: 50066
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇺🇸 美国-03
-    server: shbgp01.00991169.xyz
-    port: 14913
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 美国2
+    type: ss
+    server: us2.teacat2.xyz
+    port: 50064
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇺🇸 美国-04
-    server: shbgp01.00991169.xyz
-    port: 14914
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 英国
+    type: ss
+    server: uk1.teacat2.xyz
+    port: 50062
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇺🇸 美国-05
-    server: shbgp01.00991169.xyz
-    port: 14915
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 土耳其
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50069
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇺🇸 美国-06
-    server: shbgp01.00991169.xyz
-    port: 14916
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 阿根廷
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50063
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇨🇳 台湾-01
-    server: gzbgp01.00991169.xyz
-    port: 14951
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 马来西亚
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50070
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇰🇷 韩国-01
-    server: shbgp01.00991169.xyz
-    port: 14965
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 德国
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50071
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇰🇷 韩国-02
-    server: shbgp01.00991169.xyz
-    port: 14966
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 印度
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50072
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇮🇳 印度-01
-    server: gzbgp01.00991169.xyz
-    port: 14921
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 澳洲
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50073
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇹🇭 泰国-01
-    server: gzbgp01.00991169.xyz
-    port: 14961
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 西班牙
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50074
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇻🇳 越南-01
-    server: gzbgp01.00991169.xyz
-    port: 14962
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 墨西哥
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50075
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇦🇺 悉尼-01
-    server: gzbgp01.00991169.xyz
-    port: 14970
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 荷兰
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50076
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇦🇪 迪拜-01
-    server: gzbgp01.00991169.xyz
-    port: 14972
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 法国
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50077
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇬🇧 伦敦-01
-    server: bjbgp01.00991169.xyz
-    port: 14963
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 波兰
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50078
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇬🇧 伦敦-02
-    server: bjbgp01.00991169.xyz
-    port: 14964
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 菲律宾
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50079
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
-  - name: 🇹🇷 土耳其-01
-    server: bjbgp01.00991169.xyz
-    port: 14971
-    type: trojan
-    password: C4E49C72-F993-7150-42E1-CF1D0C363E30
-    sni: iqiyi.com
-    skip-cert-verify: true
+  - name: 巴西
+    type: ss
+    server: gy.teacat2.xyz
+    port: 50081
+    cipher: aes-256-gcm
+    password: 53497a0c-9a80-49c5-bbc5-48f1c69529bd
     udp: true
 proxy-groups:
-  - name: Proxies
+  - name: Teacat
     type: select
     proxies:
-      - HK
-      - JP
-      - SG
-      - TW
-      - US
-      - "Traffic: 19.33 GB | 100 GB"
-      - "Expire: 2022-12-28"
-      - 🇭🇰 香港-01
-      - 🇭🇰 香港-02
-      - 🇭🇰 香港-03
-      - 🇭🇰 香港-04
-      - 🇭🇰 香港-05
-      - 🇭🇰 香港-06
-      - 🇯🇵 日本-01
-      - 🇯🇵 日本-02
-      - 🇯🇵 日本-03
-      - 🇯🇵 日本-04
-      - 🇸🇬 狮城-01
-      - 🇸🇬 狮城-02
-      - 🇸🇬 狮城-03
-      - 🇺🇸 美国-01
-      - 🇺🇸 美国-02
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国-04
-      - 🇺🇸 美国-05
-      - 🇺🇸 美国-06
-      - 🇨🇳 台湾-01
-      - 🇰🇷 韩国-01
-      - 🇰🇷 韩国-02
-      - 🇮🇳 印度-01
-      - 🇹🇭 泰国-01
-      - 🇻🇳 越南-01
-      - 🇦🇺 悉尼-01
-      - 🇦🇪 迪拜-01
-      - 🇬🇧 伦敦-01
-      - 🇬🇧 伦敦-02
-      - 🇹🇷 土耳其-01
-  - name: Netflix
-    type: select
+      - 自动选择
+      - 故障转移
+      - IEPL 香港  ₂.₅ₓ
+      - IEPL 台湾  ₂.₅ₓ
+      - IEPL 日本 ₂.₅ₓ
+      - IEPL 新加坡 ₂.₅ₓ
+      - IEPL 韩国  ₂.₅ₓ
+      - IEPL 美国 ₂.₅ₓ
+      - 香港1
+      - 香港2
+      - 香港3
+      - 台湾1
+      - 台湾2
+      - 日本1
+      - 日本2
+      - 韩国1
+      - 新加坡1
+      - 新加坡2
+      - 美国1
+      - 美国2
+      - 英国
+      - 土耳其
+      - 阿根廷
+      - 马来西亚
+      - 德国
+      - 印度
+      - 澳洲
+      - 西班牙
+      - 墨西哥
+      - 荷兰
+      - 法国
+      - 波兰
+      - 菲律宾
+      - 巴西
+  - name: 自动选择
+    type: url-test
     proxies:
-      - Proxies
-      - HK
-      - JP
-      - SG
-      - TW
-      - US
-  - name: Streaming
-    type: select
+      - IEPL 香港  ₂.₅ₓ
+      - IEPL 台湾  ₂.₅ₓ
+      - IEPL 日本 ₂.₅ₓ
+      - IEPL 新加坡 ₂.₅ₓ
+      - IEPL 韩国  ₂.₅ₓ
+      - IEPL 美国 ₂.₅ₓ
+      - 香港1
+      - 香港2
+      - 香港3
+      - 台湾1
+      - 台湾2
+      - 日本1
+      - 日本2
+      - 韩国1
+      - 新加坡1
+      - 新加坡2
+      - 美国1
+      - 美国2
+      - 英国
+      - 土耳其
+      - 阿根廷
+      - 马来西亚
+      - 德国
+      - 印度
+      - 澳洲
+      - 西班牙
+      - 墨西哥
+      - 荷兰
+      - 法国
+      - 波兰
+      - 菲律宾
+      - 巴西
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+  - name: 故障转移
+    type: fallback
     proxies:
-      - Proxies
-      - HK
-      - JP
-      - SG
-      - TW
-      - US
-  - name: StreamingSE
-    type: select
-    proxies:
-      - DIRECT
-      - HK
-      - TW
-  - name: HK
-    type: select
-    proxies:
-      - 🇭🇰 香港-01
-      - 🇭🇰 香港-02
-      - 🇭🇰 香港-03
-      - 🇭🇰 香港-04
-      - 🇭🇰 香港-05
-      - 🇭🇰 香港-06
-  - name: JP
-    type: select
-    proxies:
-      - 🇯🇵 日本-01
-      - 🇯🇵 日本-02
-      - 🇯🇵 日本-03
-      - 🇯🇵 日本-04
-  - name: SG
-    type: select
-    proxies:
-      - 🇸🇬 狮城-01
-      - 🇸🇬 狮城-02
-      - 🇸🇬 狮城-03
-  - name: TW
-    type: select
-    proxies:
-      - 🇨🇳 台湾-01
-  - name: US
-    type: select
-    proxies:
-      - 🇺🇸 美国-01
-      - 🇺🇸 美国-02
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国-04
-      - 🇺🇸 美国-05
-      - 🇺🇸 美国-06
+      - IEPL 香港  ₂.₅ₓ
+      - IEPL 台湾  ₂.₅ₓ
+      - IEPL 日本 ₂.₅ₓ
+      - IEPL 新加坡 ₂.₅ₓ
+      - IEPL 韩国  ₂.₅ₓ
+      - IEPL 美国 ₂.₅ₓ
+      - 香港1
+      - 香港2
+      - 香港3
+      - 台湾1
+      - 台湾2
+      - 日本1
+      - 日本2
+      - 韩国1
+      - 新加坡1
+      - 新加坡2
+      - 美国1
+      - 美国2
+      - 英国
+      - 土耳其
+      - 阿根廷
+      - 马来西亚
+      - 德国
+      - 印度
+      - 澳洲
+      - 西班牙
+      - 墨西哥
+      - 荷兰
+      - 法国
+      - 波兰
+      - 菲律宾
+      - 巴西
+    url: http://www.gstatic.com/generate_204
+    interval: 7200
 rules:
+  - DOMAIN-KEYWORD, openai, Teacat
   - DOMAIN-KEYWORD, gitee, DIRECT
   - DOMAIN-KEYWORD, programmercarl, DIRECT
-  - DOMAIN-KEYWORD, spring.io, Proxies
-  - DOMAIN-KEYWORD, openai.com, Proxies
-  - DOMAIN-KEYWORD, grammarly, Proxies
-  - DOMAIN-KEYWORD, txl.ca, Proxies
-  - DOMAIN-KEYWORD, mo.fish, Proxies
-  - DOMAIN-KEYWORD, deeply, Proxies
-  - DOMAIN-KEYWORD, google, Proxies
-  - DOMAIN-KEYWORD, overleaf.com, Proxies
-  - DOMAIN-KEYWORD, git, Proxies
-  - DOMAIN-KEYWORD, github, Proxies
+  - DOMAIN-KEYWORD, spring.io, Teacat
+  - DOMAIN-KEYWORD, openai.com, Teacat
+  - DOMAIN-KEYWORD, grammarly, Teacat
+  - DOMAIN-KEYWORD, txl.ca, Teacat
+  - DOMAIN-KEYWORD, mo.fish, Teacat
+  - DOMAIN-KEYWORD, deeply, Teacat
+  - DOMAIN-KEYWORD, google, Teacat
+  - DOMAIN-KEYWORD, overleaf.com, Teacat
+  - DOMAIN-KEYWORD, git, Teacat
+  - DOMAIN-KEYWORD, github, Teacat
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,Proxies
-  - RULE-SET,apple,Proxies
-  - RULE-SET,google,Proxies
-  - RULE-SET,proxy,Proxies
+  - RULE-SET,icloud,Teacat
+  - RULE-SET,apple,Teacat
+  - RULE-SET,google,Teacat
+  - RULE-SET,proxy,Teacat
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,telegramcidr,Proxies
+  - RULE-SET,telegramcidr,Teacat
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,Proxies
+  - MATCH,Teacat
 tun:
   enable: true
   stack: gvisor
